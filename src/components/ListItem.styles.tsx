@@ -4,18 +4,21 @@ export const useStyles = createUseStyles({
   container: {
     display: 'flex',
     flex: 1,
-    // flexDirection: 'row',
+    minHeight: 50,
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   checkbox: {
-    display: 'flex',
-    flex: 1,
+    margin:  10,
   },
   todo: {
-    display: 'flex',
-    flex: 1,
+    margin:  10,
+    color: 'white',
+    fontSize: 16,
   },
   deleteBtn: {
-    display: 'flex',
-    flex: 1,
+    margin:  10,
+    padding: 10,
+    fontWeight: 'bold',
   },
 })

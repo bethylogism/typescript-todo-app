@@ -14,9 +14,16 @@ export default function ListItem(
 
   return (
     <div className={classes.container}>
-      <input type='checkbox' checked={isCompleted} onChange={() => toggleComplete(index, isCompleted)} />
-      <p>{text}</p>
-      { isCompleted ? <button onClick={() => onDelete(index)}>X</button> : null }
+      <input
+        type='checkbox'
+        checked={isCompleted}
+        onChange={() => toggleComplete(index, isCompleted)}
+        className={classes.checkbox}
+      />
+      <p className={classes.todo}>{text}</p>
+      { isCompleted
+        ? <button onClick={() => onDelete(index)} className={classes.deleteBtn}>X</button>
+        : null }
     </div>
   )
 }

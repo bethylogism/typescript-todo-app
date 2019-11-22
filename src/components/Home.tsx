@@ -58,9 +58,16 @@ const Home: React.FC = () => {
   return (
     <div className={classes.container}>
       <h1 className={classes.heading}>To Do App</h1>
-      {list}
-      <input type='text' value={text} onChange={handleInput} />
-      <button onClick={addTodo}>Add todo</button>
+      <div className={classes.listContainer}>
+        {list}
+      </div>
+      <input
+        type='text'
+        value={text}
+        onChange={handleInput}
+        className={classes.input}
+      />
+      <div onClick={addTodo} className={classes.btn}>Add todo</div>
     </div>
   );
 }
